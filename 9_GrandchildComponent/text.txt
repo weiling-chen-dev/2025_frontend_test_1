@@ -1,0 +1,4 @@
+/** Read about the code below, suggest how to improve the code **/ /** Code block start */
+
+可以使用 createContext 在 ParentComponent 中包住 ChildComponent 和 GrandchildComponent，這樣可以在各自的 ChildComponent 和 GrandchildComponent 裡
+useContext 直接取值，避免 prop drilling 傳很多層。

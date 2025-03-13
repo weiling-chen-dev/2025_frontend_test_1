@@ -1,0 +1,15 @@
+
+
+/* Can you explain about the type of never and what is the differ with void? */
+
+never 在typescript的判斷中，代表 unreachable endpotints，也就是因為某些原因程式無法正常跑完，永遠不會讀取到某個值，或者永遠不會有反回值。有兩個官方的例子，第一是 infinite loop，第二是throw Error。infinite loop 的函式如while(true){...} 永遠不會結束所以返回值永遠不會發生。throw Error 拋出錯誤，因此程式也不是正常的完成，永遠不會有反回值。
+
+以下還有另一個例子：
+type NonNullable<T> = T extends null | undefined ? never : T;
+type N=NonNullable<undefined>;
+const n: N=undefined;
+此時variable n 的型別是 never，這就指出 n 不應該也永遠不會被讀取到（unreachable code），達到 NonNullable<T>  的目的，永遠不應該是 null 或 undefined。
+
+在正常運作下，javascript 的函式若沒有返回任何值，正常跑完程式碼後，最終都會返回 undefined，代表沒有定義返回值，這個情況則是 return void。譬如說 function print(x){console.log(x);}
+
+結論，void 和 never 只要的差別是，程式有沒有正常的執行結束，並且有 reachable endpoint。若正常執行完每行程式碼，會返回任何定義的型別，可能是 string, number, null…也可能是 undefined 也就是 return void。若是永遠沒有結束的一天，永遠不可能有return 的值，則是 never。

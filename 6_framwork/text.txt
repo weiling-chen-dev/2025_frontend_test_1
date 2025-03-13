@@ -1,0 +1,8 @@
+/** What is difference between framework base website and normal website (none framework) **/
+
+框架可以說是軟體的架構，提供一套系統性建構方法，用以優化開發流程或封裝複雜的底層邏輯。
+每個語言都有依照各自的實際應用面發展出的框架。譬如 Java 有 Spring, Python 有 Django。
+以前端網頁開發來說， 有如 Vue.js、React.js、Angular.js，都是為了解決前端開發遇到的問題而成生的，可能是解決網頁的效能面向，也可能要提升DX開發體驗。
+例如，可以提升程式的復用性、可閱讀性，不用一直複製相同程式碼。譬如前面題目提到的 virtual DOM ，只更新需要更新的DOM，而不是重新渲染整個DOM tree，優化網站的performance.
+框架算是一種標準化工具有其優點，可以依照不同框架的優劣來取捨選擇什麼，也可以不使用。因為框架的標準化也有可能成為限制，非框架的開發可能靈活度較高，但相對也可能較難維護或需要更多開發時間。
+舉例來說，使用 react.js 就要使用 JSX 語法，適合建構複雜的軟體。若不使用就是從頭自己搭建 html css 與 javascript。

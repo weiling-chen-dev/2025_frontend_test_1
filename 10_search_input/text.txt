@@ -1,0 +1,3 @@
+/** Read about the code below, achieving that make input element in “SearchInput” to be focused while search button on click **/
+
+在 Page 用 useRef，ref 到 SearchInput ，傳給 SearchButton 使用 ref.target.focus()。

@@ -1,0 +1,5 @@
+/** Read the code below, please figure out why after “Switch Person” button clicked, the tasks state doesn’t update correctly, and how to make it update as we expected **/
+/** Code block start */
+
+因為兩個 react 在偵測更新的節點時，兩個 component 改變的只有 props.name 裏頭的 state 是相同的，因此只有名字改變，tasks 數量沒變。
+這時候要將兩個 TaskCounter 各自傳 unique key 進去，讓 react 在判斷 diff 的時候，知道兩個 TaskCounter 分別有自己獨立的 state，是各自獨立的，分別更新更各自的 State。

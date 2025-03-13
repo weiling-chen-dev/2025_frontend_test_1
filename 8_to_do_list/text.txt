@@ -1,0 +1,14 @@
+看起來是要做一個 to do list，然後勾選完成，若是完成，會依據 studyPoint 增加 總累積點數，顯示在畫面上。
+大架構上，我會新增一個component <Todo /> 包含完成的checkbox 和相關資訊以及 onClick 事件。用 todos.map 出 兩個 list。
+程式碼的問題找到了三個
+一、
+const { id, text, studyPoint } = todos; todos 是 array，這樣解構錯誤，應該是想要解構其中一個 object 。
+二、
+todo.completed = !todo.completed; react 必須是 immutable，避免直接操作 object 的值，而且 setTodos(todos); 直接覆蓋整個 todoList 了。
+三、
+ const handleStudyPointsChange = (e) => {
+        basePoints(e.target.value);
+        setSumPoints(parseInt(value1) + parseInt(e.target.value));
+        // 這裡 setSumPoints((prev)=>prev+parseInt(e.target.value));
+        這樣寫比較好，value1 不知道哪裡冒出來的變數。
+};

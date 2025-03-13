@@ -1,0 +1,47 @@
+.container {
+  font-size: 14px;
+}
+.container .header {
+  font-size: 18px;
+}
+.container .shop-list {
+  list-style: none;
+  margin-left: -15px;
+}
+.container .shop-list li.item {
+  color: green;
+}
+.container .shop-list .item {
+  /*   Q1. Explain why does this color not works, and how to fix make it work on 1st list */
+  /*   A1: because of the CSS Specificity, as two color select the same DOMs and the 3-column-comparison of color:green is (0, 3, 1), and color:blue is (0, 2, 1),
+         so browser prioritizes color green. 
+
+         solutions: make blue selector same or more specific
+         1.  (0, 3, 2)
+              .container ol.shop-list li.item {
+                color: :blue;
+              }
+
+         2. (0, 4, 0)
+              .container .shop-list:first-child .item {
+                color: :blue;
+              }     
+                
+         3. (0, 3, 1)
+              .container ol.shop-list > .item
+                color: :blue;
+              }                
+         
+         */
+
+  color: blue;
+}
+/*   Q2. Write styling make every other line give background color to next one */
+/* A2 */
+
+.container .shop-list li:nth-child(odd) {
+  background-color: lightblue;
+}
+.container .shop-list li:nth-child(even) {
+  background-color: lightgrey;
+}

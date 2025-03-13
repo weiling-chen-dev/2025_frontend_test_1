@@ -1,0 +1,4 @@
+/* What is virtual DOM and what purpose does it aim to solve?? */  
+
+Virtual DOM 可以代表 DOM 節點的樹狀結構。由 react element 組成，react element 是一個 plain object，紀錄每個 DOM 的tag, attribute, children 等相關資訊。
+在重新渲染之前，會使用 diffing 演算法比對新的 Virtual DOM 和舊的 Virtual DOM 之間的變化，找到需要更新的 DOM 節點，僅更新需要更改的節點或新增本來不從在的，而不會重新render 整個 DOM tree，提高網頁效能。

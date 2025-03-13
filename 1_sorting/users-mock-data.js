@@ -1,0 +1,96 @@
+module.exports = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    customerID: "12345",
+    note: null,
+    profession: "student",
+  },
+  {
+    firstName: "Jane",
+    lastName: "Smith",
+    customerID: "67890",
+    note: "Loyal customer",
+    profession: "freelancer",
+  },
+  {
+    firstName: "Mike",
+    lastName: null, // Last name set to null
+    customerID: "11223",
+    note: "Needs assistance with project",
+    profession: "engineer",
+  },
+  {
+    firstName: "Sarah",
+    lastName: "",
+    customerID: "33445",
+    profession: "systemAnalytics",
+  },
+  {
+    firstName: "Emma",
+    customerID: "55667",
+    note: "Interested in new product features",
+    profession: "productOwner",
+  },
+  {
+    firstName: "emma",
+    customerID: "54667",
+    note: "Interested in new product features",
+    profession: "productOwner",
+  },
+  {
+    firstName: "emma",
+    customerID: "55668",
+    note: "Interested in new product features",
+    profession: "productOwner",
+  },
+  {
+    firstName: "Emma",
+    lastName: "Chen",
+    customerID: "55669",
+    note: "Interested in new product features",
+    profession: "productOwner",
+  },
+  {
+    firstName: "emma",
+    lastName: "Chen",
+    customerID: "55670",
+    note: "Interested in new product features",
+    profession: "productOwner",
+  },
+  {
+    firstName: "Lucas",
+    lastName: "Brown",
+    customerID: "78901",
+    note: null,
+    profession: "student",
+  },
+  {
+    firstName: "Olivia",
+    lastName: "Wilson",
+    customerID: "22334",
+    note: "Has a few queries regarding engineering",
+    profession: "engineer",
+  },
+  {
+    firstName: "Mike",
+    lastName: undefined, // Last name set to undefined
+    customerID: "44556",
+    note: "Freelancer looking for new clients",
+    profession: "freelancer",
+  },
+  {
+    firstName: "Sophia",
+    lastName: "Martinez",
+    customerID: "66778",
+    note: "Needs help with system analytics tools",
+    profession: "systemAnalytics",
+  },
+  {
+    firstName: "Ethan",
+    lastName: "Garcia",
+    customerID: "88990",
+    note: "",
+    profession: "productOwner",
+  },
+];
